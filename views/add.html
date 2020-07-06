@@ -1,0 +1,21 @@
+<html>
+    <form method="post" id="authForm" action="/add">
+        <fieldset>
+          <legend class="screen_out">What To Do?</legend>
+          <div class="box_login">
+            <div class="inp_text">
+              <label for="title" class="screen_out">제목</label>
+              <input type="text" id="title" name="title" placeholder="Title" >
+            </div>
+            <div class="inp_text">
+              <label for="todo" class="screen_out">할 일</label>
+              <textarea id="title" name="content" cols="40" rows="8"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="add_btn">추가</button> 
+          </fieldset>
+      </form>
+      <form method="get" action="/home" id="homeForm">  
+        <button type="submit" class="home_btn">목록</button> 
+      </form>
+</html>

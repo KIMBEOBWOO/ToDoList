@@ -1,0 +1,32 @@
+
+<html>
+    <head>
+        <title>home</title>
+    </head>
+
+    <body>
+        <table width="100%" border="1">
+            <tr>
+                <td>No</td>
+                <td>TITLE</td>
+                <td>CONTENT</td>
+                <td>DELETE</td>
+                <td>UPDATE</td>
+            </tr>
+            <% contentlist.forEach(function(item,index){ %>
+                    <tr>
+                        <td><%= item.idtodo %></td>
+                        <td><%= item.title %></td>
+                        <td><%= item.content %></td>
+                        <td><a href="/home/delete/id=<%= item.idtodo %>">삭제</a></td>
+                        <td><a href="/home/update/id=<%= item.idtodo %>">수정</a></td>
+                    </tr>
+            <% }); %>
+        </table>
+    </body>
+
+    <form method="get" action="/" id="addForm">  
+        <button type="submit" class="add_btn">추가</button> 
+    </form>
+</html>
+
